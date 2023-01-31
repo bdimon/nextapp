@@ -23,6 +23,7 @@ export default function User({user}){
         <div className={styles.user}>
             <h1>{user.name}</h1>
             <p>Nik: {user.username}</p>
+            <p>Company: {user.company.name}</p>
             <p>Street: {user.address.street}</p>
         </div>
       </MainContainer>
