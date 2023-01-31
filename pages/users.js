@@ -5,6 +5,7 @@ import Link from "next/link";
 import MainContainer from "../components/MainContainer";
 import HeadSeo from "../components/HeadSeo";
 import siteMetadata from "../data/siteMetadata";
+import styles from "../styles/User.module.scss";
 
 
 const Users = ({users}) => {
@@ -24,6 +25,7 @@ const Users = ({users}) => {
       
 
     <MainContainer keywords={"users list, ssr"}>
+      <div className={styles.user}>
         <h1>User's List</h1>
       <ul >
         {
@@ -38,6 +40,7 @@ const Users = ({users}) => {
           )
         }
       </ul>
+      </div>
     </MainContainer>
     </>
   );
