@@ -3,17 +3,26 @@
 import {useEffect, useState} from "react";
 import Link from "next/link";
 import MainContainer from "../components/MainContainer";
+import HeadSeo from "../components/HeadSeo";
+import siteMetadata from "../data/siteMetadata";
 
 
 const Users = ({users}) => {
-    // const [users, setUsers] = useState([
-    //     { id: 1, name: 'John'},
-    //     { id: 2, name: "Ann"},
-    //     { id: 3, name: "Jack"}
     // ])
    
    
     return (
+      <>
+    <HeadSeo
+      title={`Users List`}
+      description={`Your description goes here on every page. 
+        Keep character count between 140 to 160 characters`}
+      canonicalUrl={siteMetadata.siteUrl}
+      ogTwitterImage={siteMetadata.siteLogoSquare}
+      ogType={"website"}
+    />
+      
+
     <MainContainer keywords={"users list, ssr"}>
         <h1>User's List</h1>
       <ul >
@@ -30,6 +39,7 @@ const Users = ({users}) => {
         }
       </ul>
     </MainContainer>
+    </>
   );
 };
 

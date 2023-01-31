@@ -1,11 +1,11 @@
 import  Head  from "next/head";
 import A from '../components/A';
+import HeadSeo from "./HeadSeo";
 
-const MainContainer = ({children, keywords, title}) => {
+const MainContainer = ({children, keywords}) => {
     return (
         <>
-        <Head>
-        <title>{title}</title>
+       <Head>
         <meta keywords={'react, nextjs, deploy, ' + keywords}/>
         </Head>
         <div className="navbar" >
